@@ -233,47 +233,43 @@ document.addEventListener('DOMContentLoaded', () => {
 // ============================================
 // Portfolio Carousel
 // ============================================
-const track = document.getElementById('carouselTrack');
-const slides = document.querySelectorAll('.carousel-slide');
-const nextBtn = document.getElementById('nextBtn');
-const prevBtn = document.getElementById('prevBtn');
-const dots = document.querySelectorAll('.dot');
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('carouselTrack');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dots = document.querySelectorAll('.dot');
 
-let currentSlide = 0;
+    if (!track || !slides.length || !prevBtn || !nextBtn) {
+        return;
+    }
 
-function updateCarousel() {
-    if (!track) return;
+    let currentIndex = 0;
 
-    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-    slides.forEach((slide, index) => {
-        slide.classList.toggle('active', index === currentSlide);
-    });
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
 
-    dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentSlide);
-    });
-}
-
-if (nextBtn) {
     nextBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % slides.length;
+        currentIndex = (currentIndex + 1) % slides.length;
         updateCarousel();
     });
-}
 
-if (prevBtn) {
     prevBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
         updateCarousel();
     });
-}
 
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        currentSlide = index;
-        updateCarousel();
+    dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+            currentIndex = Number(dot.dataset.index);
+            updateCarousel();
+        });
     });
+
+    updateCarousel();
 });
-
-updateCarousel();
