@@ -208,70 +208,7 @@ messageInput.addEventListener('input', () => {
     }
 });
 
-// Form submission
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Validate all fields
-    const isNameValid = validateName();
-    const isEmailValid = validateEmail();
-    const isMessageValid = validateMessage();
-    
-    if (!isNameValid || !isEmailValid || !isMessageValid) {
-        return;
-    }
-    
-    // Show loading state
-    const submitButton = contactForm.querySelector('.submit-button');
-    const buttonText = submitButton.querySelector('.button-text');
-    const buttonLoader = submitButton.querySelector('.button-loader');
-    
-    buttonText.style.display = 'none';
-    buttonLoader.style.display = 'inline';
-    submitButton.disabled = true;
-    
-    // Simulate form submission (in demo mode)
-    setTimeout(() => {
-        // Hide form
-        contactForm.style.display = 'none';
-        
-        // Show success message
-        formSuccess.style.display = 'block';
-        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        
-        // Reset button state
-        buttonText.style.display = 'inline';
-        buttonLoader.style.display = 'none';
-        submitButton.disabled = false;
-        
-        // Reset form (for demo purposes)
-        contactForm.reset();
-        
-        // In production, here you would send the form data to your backend
-        // Example with EmailJS:
-        /*
-        emailjs.send('service_id', 'template_id', {
-            name: nameInput.value,
-            email: emailInput.value,
-            phone: document.getElementById('phone').value,
-            message: messageInput.value
-        })
-        .then(() => {
-            // Show success message
-        })
-        .catch((error) => {
-            // Show error message
-        });
-        */
-    }, 1500);
-});
 
-// ============================================
-// Prevent form resubmission on page reload
-// ============================================
-if (window.history.replaceState) {
-    window.history.replaceState(null, null, window.location.href);
-}
 
 // ============================================
 // Initialize on page load
@@ -292,3 +229,51 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// ============================================
+// Portfolio Carousel
+// ============================================
+const track = document.getElementById('carouselTrack');
+const slides = document.querySelectorAll('.carousel-slide');
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+const dots = document.querySelectorAll('.dot');
+
+let currentSlide = 0;
+
+function updateCarousel() {
+    if (!track) return;
+
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    slides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === currentSlide);
+    });
+
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
+}
+
+if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateCarousel();
+    });
+}
+
+if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+}
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentSlide = index;
+        updateCarousel();
+    });
+});
+
+updateCarousel();
