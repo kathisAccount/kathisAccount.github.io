@@ -1,221 +1,193 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kathi Raumplanung - Individuelle Raumgestaltung mit Herz und Verstand">
-    <title>Kathi Raumplanung - Individuelle Raumgestaltung</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Kathi Raumplanung Portfolio">
+    <title>Kathi Raumplanung - Portfolio</title>
+
+```
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+```
+
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="#home" class="logo">Kathi Raumplanung</a>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menü öffnen">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link">Start</a></li>
-                    <li><a href="#about" class="nav-link">Über mich</a></li>
-                    <li><a href="#services" class="nav-link">Leistungen</a></li>
-                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
-                </ul>
-            </div>
+
+<!-- Navigation -->
+
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="#home" class="logo">Kathi Raumplanung</a>
+
+```
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link">Start</a></li>
+            <li><a href="#about" class="nav-link">Über mich</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#contact" class="nav-link">Kontakt</a></li>
+        </ul>
+    </div>
+</div>
+```
+
+</nav>
+
+<!-- Hero -->
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Kathi Raumplanung</h1>
+        <p class="hero-subtitle">Mein Portfolio für Raumgestaltung</p>
+        <p class="hero-description">
+            Ich gestalte Räume, die funktional sind und sich gut anfühlen.
+        </p>
+        <a href="#portfolio" class="cta-button">Portfolio ansehen</a>
+    </div>
+    <div class="hero-decoration"></div>
+</section>
+
+<!-- Über mich -->
+
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Über mich</h2>
+            <div class="title-underline"></div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Kathi Raumplanung</h1>
-            <p class="hero-subtitle">Individuelle Raumgestaltung mit Herz und Verstand</p>
-            <p class="hero-description">Aus deinen Räumen wird ein Zuhause, das zu dir passt</p>
-            <a href="#contact" class="cta-button">Jetzt anfragen</a>
+```
+    <div class="about-content">
+        <div class="about-text">
+            <p class="lead">Hi, ich bin Kathi 👋</p>
+
+            <p>
+                Ich liebe es, Räume zu gestalten und aus Wohnungen echte Wohlfühlorte zu machen.
+            </p>
+
+            <p>
+                In meinem Portfolio zeige ich dir Beispiele meiner Arbeit und Ideen.
+            </p>
         </div>
-        <div class="hero-decoration"></div>
-    </section>
+    </div>
+</div>
+```
 
-    <!-- Über mich Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Über mich</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="lead">
-                        Herzlich willkommen! Ich bin Kathi und helfe dir dabei, aus deinen Räumen 
-                        etwas Besonderes zu machen.
-                    </p>
-                    <p>
-                        Mit Liebe zum Detail und einem Gespür für Funktionalität gestalte ich Räume, 
-                        in denen du dich wohlfühlst. Jeder Raum erzählt eine Geschichte – lass uns 
-                        gemeinsam deine Geschichte erzählen.
-                    </p>
-                    <p>
-                        Ob Wohnzimmer, Küche oder das gesamte Zuhause – ich begleite dich von der 
-                        ersten Idee bis zur finalen Umsetzung. Dabei steht immer dein persönlicher 
-                        Stil und dein Wohlbefinden im Mittelpunkt.
-                    </p>
-                </div>
-                <!-- Platzhalter für Profilbild - einfach ein div mit Hintergrundfarbe -->
-                <!-- <div class="about-image">
-                    <img src="profilbild.jpg" alt="Kathi">
-                </div> -->
-            </div>
+</section>
+
+<!-- Portfolio (ersetzt Leistungen) -->
+
+<section id="portfolio" class="services">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Mein Portfolio</h2>
+            <div class="title-underline"></div>
+            <p class="section-description">
+                Eine Auswahl meiner Projekte
+            </p>
         </div>
-    </section>
 
-    <!-- Leistungen Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Meine Leistungen</h2>
-                <div class="title-underline"></div>
-                <p class="section-description">
-                    Von der ersten Idee bis zur Umsetzung – ich unterstütze dich bei allen Schritten
-                </p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3 class="service-title">Raumkonzepte & Grundrissplanung</h3>
-                    <p class="service-description">
-                        Durchdachte Raumplanung für optimale Nutzung und Wohlfühlatmosphäre. 
-                        Gemeinsam finden wir die beste Anordnung für deine Möbel und Räume.
-                    </p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3 class="service-title">Farbberatung & Materialauswahl</h3>
-                    <p class="service-description">
-                        Harmonische Farbkonzepte, die deinen persönlichen Stil unterstreichen. 
-                        Ich helfe dir bei der Auswahl von Farben, Materialien und Oberflächen.
-                    </p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3 class="service-title">Einrichtungsberatung</h3>
-                    <p class="service-description">
-                        Individuelle Beratung bei der Auswahl von Möbeln und Accessoires. 
-                        Gemeinsam finden wir Stücke, die perfekt zu dir und deinem Raum passen.
-                    </p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏡</div>
-                    <h3 class="service-title">Komplette Raumgestaltung</h3>
-                    <p class="service-description">
-                        Von der Planung bis zur Umsetzung – ich begleite dich durch den gesamten 
-                        Prozess und sorge dafür, dass dein Traumzuhause Wirklichkeit wird.
-                    </p>
-                </div>
-            </div>
+```
+    <div class="services-grid">
+
+        <div class="service-card">
+            <div class="service-icon">🛋️</div>
+            <h3 class="service-title">Wohnzimmer Makeover</h3>
+            <p class="service-description">
+                Modernes Wohnzimmer mit gemütlicher Atmosphäre.
+            </p>
         </div>
-    </section>
 
-    <!-- Kontakt Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Kontakt</h2>
-                <div class="title-underline"></div>
-                <p class="section-description">
-                    Hast du Fragen oder möchtest du ein unverbindliches Beratungsgespräch? 
-                    Schreib mir einfach eine Nachricht!
-                </p>
-            </div>
-            <form id="contactForm" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name *</label>
-                    <input 
-                        type="text" 
-                        id="name" 
-                        name="name" 
-                        required 
-                        placeholder="Dein Name"
-                    >
-                    <span class="error-message" id="nameError"></span>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-Mail *</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        required 
-                        placeholder="deine.email@beispiel.de"
-                    >
-                    <span class="error-message" id="emailError"></span>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Telefon <span class="optional">(optional)</span></label>
-                    <input 
-                        type="tel" 
-                        id="phone" 
-                        name="phone" 
-                        placeholder="+49 123 456789"
-                    >
-                </div>
-                <div class="form-group">
-                    <label for="message">Nachricht *</label>
-                    <textarea 
-                        id="message" 
-                        name="message" 
-                        required 
-                        rows="6"
-                        placeholder="Erzähl mir von deinem Projekt..."
-                    ></textarea>
-                    <span class="error-message" id="messageError"></span>
-                </div>
-                <button type="submit" class="submit-button">
-                    <span class="button-text">Anfrage senden</span>
-                    <span class="button-loader" style="display: none;">Wird gesendet...</span>
-                </button>
-                <div id="formSuccess" class="form-success" style="display: none;">
-                    <p>✓ Vielen Dank für deine Nachricht! Ich melde mich schnellstmöglich bei dir.</p>
-                    <p class="form-note">
-                        <small>
-                            Hinweis: Dies ist eine Demo-Version. Für die Live-Version wird das Formular 
-                            mit einem E-Mail-Service verbunden (z.B. EmailJS oder Netlify Forms).
-                        </small>
-                    </p>
-                </div>
-            </form>
+        <div class="service-card">
+            <div class="service-icon">🍽️</div>
+            <h3 class="service-title">Küchenplanung</h3>
+            <p class="service-description">
+                Funktionale Küche mit klarer Struktur.
+            </p>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="copyright">&copy; 2026 Kathi Raumplanung. Alle Rechte vorbehalten.</p>
-                <!-- Platzhalter für Social Media Links -->
-                <!-- <div class="social-links">
-                    <a href="#" aria-label="Instagram">Instagram</a>
-                    <a href="#" aria-label="Facebook">Facebook</a>
-                </div> -->
-                <p class="footer-links">
-                    <a href="#impressum" class="footer-link">Impressum</a>
-                    <span class="separator">|</span>
-                    <a href="#datenschutz" class="footer-link">Datenschutz</a>
-                </p>
-            </div>
+        <div class="service-card">
+            <div class="service-icon">🛏️</div>
+            <h3 class="service-title">Schlafzimmer Konzept</h3>
+            <p class="service-description">
+                Ruhiger Raum für mehr Entspannung.
+            </p>
         </div>
-    </footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-to-top" aria-label="Nach oben scrollen">
-        ↑
-    </button>
+    </div>
+</div>
+```
 
-    <script src="script.js"></script>
+</section>
+
+<!-- Kontakt -->
+
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Kontakt</h2>
+            <div class="title-underline"></div>
+            <p class="section-description">
+                Wenn dir meine Arbeit gefällt, schreib mir gerne 😊
+            </p>
+        </div>
+
+```
+    <form id="contactForm" class="contact-form">
+        <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" required>
+            <span class="error-message" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-Mail *</label>
+            <input type="email" id="email" required>
+            <span class="error-message" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Nachricht *</label>
+            <textarea id="message" rows="6" required></textarea>
+            <span class="error-message" id="messageError"></span>
+        </div>
+
+        <button type="submit" class="submit-button">
+            <span class="button-text">Nachricht senden</span>
+            <span class="button-loader" style="display: none;">Wird gesendet...</span>
+        </button>
+
+        <div id="formSuccess" class="form-success" style="display: none;">
+            <p>✓ Danke für deine Nachricht! 😊</p>
+        </div>
+    </form>
+</div>
+```
+
+</section>
+
+<!-- Footer -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2026 Kathi Raumplanung</p>
+        </div>
+    </div>
+</footer>
+
+<button id="scrollToTop" class="scroll-to-top">↑</button>
+
+<script src="script.js"></script>
+
 </body>
 </html>
