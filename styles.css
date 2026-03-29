@@ -625,32 +625,72 @@ section {
 /* ============================================
    Portfolio Carousel
    ============================================ */
+.carousel-widget {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.carousel-widget:last-child {
+    margin-bottom: 0;
+}
+
 .portfolio-carousel {
     position: relative;
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
-    max-width: 900px;
-    margin: 0 auto;
 }
 
 .carousel-track-container {
     overflow: hidden;
     width: 100%;
     border-radius: var(--radius-lg);
+    isolation: isolate;
 }
 
 .carousel-track {
     display: flex;
-    transition: transform 0.4s ease;
+    width: 100%;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .carousel-slide {
-    min-width: 100%;
+    flex: 0 0 100%;
+    width: 100%;
+    box-sizing: border-box;
     background-color: var(--color-white);
     border-radius: var(--radius-lg);
-    box-shadow: 0 4px 20px var(--color-shadow);
+    /* Light shadow — heavy blur + movement = expensive to paint each frame */
+    box-shadow: 0 1px 6px var(--color-shadow);
     overflow: hidden;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Bild/Video/iframe: optionaler Wrapper pro Slide (beliebiges Markup in .carousel-slide möglich) */
+.carousel-media {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-color: var(--color-secondary);
+}
+
+.carousel-media img,
+.carousel-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-media iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
 }
 
 .carousel-image {
@@ -658,6 +698,7 @@ section {
     height: 400px;
     object-fit: cover;
     display: block;
+    transform: translateZ(0);
 }
 
 .carousel-content {
@@ -711,6 +752,10 @@ section {
     }
 
     .carousel-image {
+        height: 250px;
+    }
+
+    .carousel-media {
         height: 250px;
     }
 

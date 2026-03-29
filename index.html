@@ -84,13 +84,16 @@
                 </p>
             </div>
     
+            <!-- Ganzen .carousel-widget-Block duplizieren für weitere Karussells. Punkte werden pro Widget in script.js erzeugt. -->
+            <div class="carousel-widget">
             <div class="portfolio-carousel">
-                <button class="carousel-btn prev" id="prevBtn" aria-label="Vorheriges Projekt">❮</button>
+                <button type="button" class="carousel-btn prev" aria-label="Vorheriges Projekt">❮</button>
     
                 <div class="carousel-track-container">
-                    <div class="carousel-track" id="carouselTrack">
+                    <!-- Projekte: nur .carousel-slide-Blöcke hier einfügen. Medien optional in .carousel-media (siehe styles.css). -->
+                    <div class="carousel-track">
     
-                        <div class="carousel-slide active">
+                        <div class="carousel-slide">
                             <img src="bilder/Projekt1.png" alt="Projekt 1" class="carousel-image">
                             <div class="carousel-content">
                                 <h3 class="service-title">Projekt 1</h3>
@@ -122,17 +125,77 @@
                                 </p>
                             </div>
                         </div>
-    
+
                     </div>
                 </div>
     
-                <button class="carousel-btn next" id="nextBtn" aria-label="Nächstes Projekt">❯</button>
+                <button type="button" class="carousel-btn next" aria-label="Nächstes Projekt">❯</button>
             </div>
     
-            <div class="carousel-dots" id="carouselDots">
-                <button class="dot active" data-slide="0" aria-label="Projekt 1"></button>
-                <button class="dot" data-slide="1" aria-label="Projekt 2"></button>
-                <button class="dot" data-slide="2" aria-label="Projekt 3"></button>
+            <div class="carousel-dots" aria-label="Projektauswahl"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio2" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meine Arbeiten</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">
+                    Projekte aus Studium, Design und eigenen Arbeiten
+                </p>
+            </div>
+
+            <!-- Ganzen .carousel-widget-Block duplizieren für weitere Karussells. Punkte werden pro Widget in script.js erzeugt. -->
+            <div class="carousel-widget">
+                <div class="portfolio-carousel">
+                    <button type="button" class="carousel-btn prev" aria-label="Vorheriges Projekt">❮</button>
+
+                    <div class="carousel-track-container">
+                        <!-- Projekte: nur .carousel-slide-Blöcke hier einfügen. Medien optional in .carousel-media (siehe styles.css). -->
+                        <div class="carousel-track">
+
+                            <div class="carousel-slide">
+                                <img src="bilder/Projekt1.png" alt="Projekt 1" class="carousel-image">
+                                <div class="carousel-content">
+                                    <h3 class="service-title">Projekt 1</h3>
+                                    <p class="service-description">
+                                        Kurze Beschreibung zu deinem Projekt. Zum Beispiel:
+                                        Interface-Design und Umsetzung einer interaktiven Webanwendung.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="bilder/Projekt2.png" alt="Projekt 2" class="carousel-image">
+                                <div class="carousel-content">
+                                    <h3 class="service-title">Projekt 2</h3>
+                                    <p class="service-description">
+                                        Kurze Beschreibung zu deinem Projekt. Zum Beispiel:
+                                        Uni-Projekt im Bereich Informatik mit Fokus auf Konzeption und Entwicklung.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="bilder/Projekt3.png" alt="Projekt 3" class="carousel-image">
+                                <div class="carousel-content">
+                                    <h3 class="service-title">Projekt 3</h3>
+                                    <p class="service-description">
+                                        Kurze Beschreibung zu deinem Projekt. Zum Beispiel:
+                                        Visuelles Designkonzept mit Schwerpunkt auf Farbe, Typografie und Layout.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button type="button" class="carousel-btn next" aria-label="Nächstes Projekt">❯</button>
+                </div>
+
+                <div class="carousel-dots" aria-label="Projektauswahl"></div>
             </div>
         </div>
     </section>
